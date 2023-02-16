@@ -2,7 +2,7 @@
   "name": "valentinesaga",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://valentinesaga.onrender.com/api/v1"
+  "proxy":"https://valentinesaga.onrender.com/api/v1",
  
   
   "dependencies": {
