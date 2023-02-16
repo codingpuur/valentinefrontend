@@ -2,12 +2,8 @@
   "name": "valentinesaga",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://valentinesaga.com",
-  "proxy": {
-    "/api/v1":{
-  "target":"https://valentinesaga.onrender.com"
-    }
-},
+  "proxy":"https://valentinesaga.onrender.com/api/v1"
+ 
   
   "dependencies": {
     "@emotion/react": "^11.7.1",
