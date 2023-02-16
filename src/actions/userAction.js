@@ -36,7 +36,7 @@ import {
     ALL_USERS_SUCCESS,
     ALL_USERS_REQUEST,
 } from '../constants/userConstants';
-import axios from 'axios';
+import axios from '../instance';
 
 // Login User
 export const loginUser = (email, password) => async (dispatch) => {
