@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from '../instance';
 import {
     ALL_PRODUCTS_FAIL,
     ALL_PRODUCTS_REQUEST,
