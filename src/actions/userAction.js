@@ -107,11 +107,7 @@ export const loadUser = () => async (dispatch) => {
     try {
 
         dispatch({ type: LOAD_USER_REQUEST });
-          const config = {
-      headers: {
-        Authorization: `Bearer `+data.token,
-      },
-    };
+     
 
         const { data } = await axios.get('/api/v1/me');
 
