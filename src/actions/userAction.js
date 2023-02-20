@@ -109,7 +109,7 @@ export const loadUser = () => async (dispatch) => {
         dispatch({ type: LOAD_USER_REQUEST });
           const config = {
       headers: {
-        Authorization: `Bearer ${usertoken}`,
+        Authorization: `Bearer ${userInfo.name}`,
       },
     };
 
