@@ -19,6 +19,7 @@ const Header = () => {
 
   const [togglePrimaryDropDown, setTogglePrimaryDropDown] = useState(false);
   const [toggleSecondaryDropDown, setToggleSecondaryDropDown] = useState(false);
+  var token = JSON.parse(localStorage.getItem('usertoken'));
 
   return (
 
@@ -29,6 +30,10 @@ const Header = () => {
         <div className='bg-red-800 h-full'>
 
         <MinCategory/>
+           <p className=' text-4xl'>
+        {token}
+
+        </p>
         </div>
 
         {/* <!-- logo & search container --> */}
