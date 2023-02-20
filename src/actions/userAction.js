@@ -61,6 +61,7 @@ export const loginUser = (email, password) => async (dispatch) => {
             payload: data.user,
         });
          localStorage.setItem("userInfo", JSON.stringify(data));
+        localStorage.setItem("usertoken", JSON.stringify(data.token));
 
     } catch (error) {
         dispatch({
