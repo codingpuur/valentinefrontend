@@ -268,7 +268,7 @@ export const getAllUsers = () => async (dispatch) => {
     try {
 
         dispatch({ type: ALL_USERS_REQUEST });
-          const config = {
+          
  
         const { data } = await axios.get('/api/v1/admin/users');
         dispatch({
