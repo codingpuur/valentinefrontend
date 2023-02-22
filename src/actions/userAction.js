@@ -37,7 +37,7 @@ import {
     ALL_USERS_REQUEST,
 } from '../constants/userConstants';
 import axios from '../instance';
-
+var token = JSON.parse(localStorage.getItem('usertoken'));
 // Login User
 export const loginUser = (email, password) => async (dispatch) => {
     try {
@@ -61,7 +61,7 @@ export const loginUser = (email, password) => async (dispatch) => {
             payload: data.user,
         });
          localStorage.setItem("userInfo", JSON.stringify(data));
-        
+        localStorage.setItem("usertoken", JSON.stringify(data.token));
 
     } catch (error) {
         dispatch({
@@ -109,7 +109,7 @@ export const loadUser = () => async (dispatch) => {
         dispatch({ type: LOAD_USER_REQUEST });
        const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${token}`,
       },
     };
 
@@ -273,7 +273,7 @@ export const getAllUsers = () => async (dispatch) => {
         dispatch({ type: ALL_USERS_REQUEST });
           const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${token}`,
       },
     };
         const { data } = await axios.get('/api/v1/admin/users');
@@ -297,7 +297,7 @@ export const getUserDetails = (id) => async (dispatch) => {
         dispatch({ type: USER_DETAILS_REQUEST });
           const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${token}`,
       },
     };
         const { data } = await axios.get(`/api/v1/admin/user/${id}`);
