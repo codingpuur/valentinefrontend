@@ -30,10 +30,7 @@ const Header = () => {
         <div className='bg-red-800 h-full'>
 
         <MinCategory/>
-           <p className=' text-4xl'>
-        {token}
-
-        </p>
+       
         </div>
 
         {/* <!-- logo & search container --> */}
